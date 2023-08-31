@@ -1,0 +1,1 @@
+var item = 2; foo(); function foo(item){console.log(item)}; item = 1; // prints undefined and 1
