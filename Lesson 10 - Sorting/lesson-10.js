@@ -12,13 +12,12 @@ const books = [
     { name: "The Hunger Games", author: "Suzanne Collins" },
   ];
 
-books.sort((a, b) => {
-
-    //compare names
-    const lastnameA = a.author.split(" ")[1];
-    const lastnameB = b.author.split(" ")[1];
-    return lastnameA < lastnameB ? -1 : 1;
-});
+books.sort((a, b) => { 
+    const lastnameA = a.author.split(' ').pop() || '';
+    const lastnameB = b.author.split(' ').pop() || '';
+    
+    return lastnameA > lastnameB ? 1 : -1;
+}) 
 
 console.log(JSON.stringify(books));
 
